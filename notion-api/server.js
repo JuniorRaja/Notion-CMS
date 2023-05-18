@@ -4,7 +4,7 @@ const { Client } = require("@notionhq/client");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const jsonParser = bodyParser.json();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 require("dotenv").config();
 
 app.use(cors());
@@ -34,7 +34,7 @@ app.get("/NotionAPIGet", async (req, res) => {
 });
 
 app.post("/NotionAPIPost", jsonParser, async (req, res) => {
-  //   const { Fullname, CompanyRole, Location } = req.body;
+  const { ProductTitle, StockQuant } = req.body;
 
   try {
     const response = await notion.pages.create({
@@ -46,13 +46,13 @@ app.post("/NotionAPIPost", jsonParser, async (req, res) => {
           title: [
             {
               text: {
-                content: "Orchid Blossoms",
+                content: ProductTitle,
               },
             },
           ],
         },
         Stock: {
-          number: 3,
+          number: StockQuant,
         },
       },
     });
