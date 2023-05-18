@@ -10,7 +10,7 @@
 
 
 .App-header {
-  background-color: #282c34;
+  background-color: #FFF2CC;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -23,14 +23,14 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #8EC1D6;
+  background-color: #FFF2CC;
 }
 
 .form {
   margin: 100px auto;
   width: 250px;
   height: 350px;
-  background-color: #fff;
+  background-color: #FFD966;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -89,7 +89,7 @@ body {
   margin: 100px auto;
   width: 300px;
   height: 500px;
-  background-color: #fff;
+  background-color: #DFA67B;
   border-radius: 10px;
   color: black;
   padding: 10px;
